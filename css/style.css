@@ -22,11 +22,11 @@ body{
     color: #ffff;
     position: relative;
     display: flex;
+    justify-content: center;
     background-image: url('../img/planet.gif');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
-    justify-content: center;
+    background-size:cover;
 }
 
 .container{
@@ -66,6 +66,14 @@ header .header__nav .header__nav--items a:hover{
     border-bottom: 1px solid white;
 }
 
+header .header__nav .menu__toggle img{
+    width: 50px;
+}
+
+header .header__nav .menu__toggle{
+    display: none;
+}
+
 main{
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -84,14 +92,14 @@ main .main__box1{
 }
 
 main .main__box1 h1{
-    font-size: 6.6rem;
+    font-size: 6.6em;
 }
 
 main .btn--global{
     width: 190px;
     height: 60px;
     text-align: center;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-weight: 600;
     margin-block-start: 1rem;
     border-radius: 10px;
@@ -114,9 +122,57 @@ main .btn--global:hover{
 main .main__box2{
     grid-column: 2;
     grid-row: 2; 
-    margin-inline-start: 10%;   
+    margin-inline-start: 9%;   
 }
 
 main .main__box2{
     
+}
+
+@media screen and (min-width:1930px) {
+
+    body{
+        font-size: 25px;
+    }
+
+    .container{
+        width: 75%;
+    }
+    
+    main .btn--global{
+        width: 230px;
+        height: 80px;
+        font-size: 1.4rem;
+    }
+
+    header .header__nav .header__nav--items a{
+        margin-inline: 1.2rem;
+        font-size: 1.5rem;
+        text-decoration: none;
+        
+    }
+}
+
+@media screen and (max-width: 970px) {
+
+    header .header__nav .header__nav--items{
+        display: none;
+    }
+    
+    header .header__nav .menu__toggle{
+        display:inline;
+    }
+
+    body{
+        font-size: 12px;
+    }
+
+    .container{
+        width: 90%;
+    }
+    
+    main .btn--global{
+        
+        font-size: 1rem;
+    }
 }
